@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout">
 
     <data>
+
         <variable
             name="Customer"
-            type="com.mohammadmirzakhani.sample.mvvmdatabinding.model.Customer"
-            />
+            type="com.mohammadmirzakhani.sample.mvvmdatabinding.model.Customer" />
+
+        <variable
+            name="eventHandler"
+            type="com.mohammadmirzakhani.sample.mvvmdatabinding.handler.EventHandler" />
 
     </data>
 
@@ -23,11 +28,11 @@
             android:layout_height="19dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
+            android:text="@{Customer.firstName}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.083"
-            android:text="@{Customer.firstName}"
             tools:text="first_name" />
 
         <TextView
@@ -36,9 +41,9 @@
             android:layout_height="19dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
+            android:text="@{Customer.lastName}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/first_name"
-            android:text="@{Customer.lastName}"
             tools:text="last_name" />
 
         <ImageView
@@ -50,6 +55,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/last_name"
             tools:srcCompat="@tools:sample/avatars" />
+
+        <!--<Button-->
+            <!--android:id="@+id/button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginTop="24dp"-->
+            <!--android:text="Button"-->
+            <!--android:onClick="@{(v) -> eventHandler.onHandleClick()}"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="24dp"-->
+            <!--android:layout_marginTop="24dp"-->
+            <!--android:text="Button"-->
+            <!--android:onClick="@{(v) -> EventHandler.clickOnViewGetData(v, Customer)}"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/button"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/imageView"-->
+            <!--tools:text="send model to clickhandler calss" />-->
 
     </android.support.constraint.ConstraintLayout>
 

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.mohammadmirzakhani.sample.mvvmdatabinding.databinding.ActivityMainBinding;
+import com.mohammadmirzakhani.sample.mvvmdatabinding.handler.EventHandler;
 import com.mohammadmirzakhani.sample.mvvmdatabinding.model.Customer;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         binding.imageView.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
 
 
+        //EventHandler::clickOnView
+//        binding.setEventHandler(new EventHandler(this));
 
     }
 }
