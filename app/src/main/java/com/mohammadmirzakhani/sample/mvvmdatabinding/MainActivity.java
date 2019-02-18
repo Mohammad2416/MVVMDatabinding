@@ -25,5 +25,10 @@ public class MainActivity extends AppCompatActivity {
         binding.setCustomer(customer);
 
 
+        //And Also you can find and bind data for views which are in your layout but they are not in your Model.
+        binding.imageView.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+
+
+
     }
 }
